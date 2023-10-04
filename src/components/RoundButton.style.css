@@ -1,0 +1,23 @@
+.round-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #252F33;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:hsl(217, 12%, 63%);
+  cursor: pointer;
+}
+
+.round-button:hover {
+    background-color: orange;
+    color: white;
+}
+
+.selected {
+    background-color: hsl(217, 12%, 63%);
+    color: white;
+    pointer-events: none;
+    cursor: default;
+}
