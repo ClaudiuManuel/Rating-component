@@ -1,35 +1,29 @@
 import { useState } from "react";
-import RoundButton from "./components/RoundButton";
-import starSvg from "./assets/icon-star.svg";
 import "./App.css";
-import "./components/RoundButton.style.css";
+import "./components/RoundButton/RoundButton.style.css";
+import SelectionPage from "./components/SelectionPage/SelectionPage";
+import ThankYouPage from "./components/ThankYouPage/ThankYouPage";
 
 function App() {
   const [selectedRating, setSelectedRating] = useState<number>(0);
+  const [isVoteSubmitted, setIsVoteSubmitted] = useState<boolean>(false);
 
   return (
     <div className="card">
-      <div className="card-container">
-        <div className="round-button">
-          <img src={starSvg}></img>
-        </div>
-        <h2>How did we do?</h2>
-        <p>
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us improve our offering!
-        </p>
-        <div className="ratings">
-          {[...Array(6).keys()]
-            .map((x) => x++)
-            .map((rating) => (
-              <RoundButton
-                rating={rating}
-                handleOnClick={() => setSelectedRating(rating)}
-                selected={selectedRating === rating}
-              />
-            ))}
-        </div>
-        <button>Submit</button>
+      <div
+        className={`card-container ${
+          isVoteSubmitted ? "selection-specific" : null
+        }`}
+      >
+        {isVoteSubmitted ? (
+          <ThankYouPage selectedRating={selectedRating} />
+        ) : (
+          <SelectionPage
+            setSelectedRating={setSelectedRating}
+            selectedRating={selectedRating}
+            setIsVoteSubmitted={setIsVoteSubmitted}
+          />
+        )}
       </div>
     </div>
   );

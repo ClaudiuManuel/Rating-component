@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'OverpassRegular';
-  src: url('./assets/fonts/Overpass-Regular.ttf') format('truetype');
+  font-family: "OverpassRegular";
+  src: url("./assets/fonts/Overpass-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'OverpassBold';
-  src: url('./assets/fonts/Overpass-Bold.ttf') format('truetype');
+  font-family: "OverpassBold";
+  src: url("./assets/fonts/Overpass-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -35,15 +35,10 @@
   justify-content: center;
   align-items: center;
   background-color: #1b212b;
-  /* background: radial-gradient(
-    circle,
-    rgba(114, 129, 151, 1) 0%,
-    rgba(37, 45, 55, 1) 55%
-  ); */
   background-size: 200% 436%;
   background-position: 50% 236%;
-  height: 400px;
-  width: 400px;
+  height: 350px;
+  width: 350px;
   border-radius: 16px;
 }
 
@@ -55,27 +50,48 @@
   width: 100%;
 }
 
+.text-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 #root button {
-  background-color: orange;
+  background-color: hsl(25, 97%, 53%);
   color: white;
   text-transform: uppercase;
   border-radius: 24px;
   border: none;
+  font-family: "OverpassBold";
 }
 
 #root button:hover {
   background-color: white;
-  color: orange;
+  color: hsl(25, 97%, 53%);
   border: none;
 }
 
 #root p {
   color: hsl(216, 12%, 54%);
-  font-family: 'OverpassRegular';
+  font-family: "OverpassRegular";
+  font-size: 15px;
 }
 
 h2 {
   margin: 0;
   color: white;
-  font-family: 'OverpassBold';
+  font-family: "OverpassBold";
+}
+
+.selection-specific {
+  align-items: center;
+  text-align: center;
+}
+
+.rating-result {
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(217, 18%, 23%);
+  border-radius: 24px;
+  padding: 8px 16px;
+  font-size: 15px;
 }
