@@ -20,7 +20,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop](https://github.com/ClaudiuManuel/Rating-component/assets/47295962/837cc702-e04b-4532-9537-ccb557e0c19c)
 
 ### Links
 
